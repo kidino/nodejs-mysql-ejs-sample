@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Last Visits</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1>Last 20 Visits</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Visitor IP</th>
+          <th>Visit Timestamp</th>
+          <th>Page Visited</th>
+          <th>User Agent</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% visits.forEach(visit => { %>
+          <tr>
+            <td><%= visit.visitor_ip %></td>
+            <td><%= visit.visit_timestamp %></td>
+            <td><%= visit.page_visited %></td>
+            <td><%= visit.user_agent %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
